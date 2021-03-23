@@ -201,6 +201,27 @@ footer{
 
 hr{
     width: 61%;
-    margin: 2rem auto;
+    margin:2rem auto 1rem auto;
 }
   
+.footer-bottom ul{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 81%;
+}
+
+.footer-bottom a{
+    color: #686b6f;
+    text-decoration: none;
+    margin: .6rem;
+    font-weight: 700;
+}
+
+.footer-bottom li{
+    list-style: none;
+}
+
+span{
+    color: #686b6f;
+}
