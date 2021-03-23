@@ -10,6 +10,7 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+
 .navbar {
     background: whitesmoke;
     padding: 1rem;
@@ -359,4 +360,19 @@ span {
         width: 75%;
     }
 
+}
+
+@media (max-width: 1000px){
+    .about h1 {
+        font-size: 40px;
+        margin-top: 1.5rem;
+    }
+
+    .about p {
+        width: 95%;
+    }
+
+    hr{
+        width: 71%;
+    }
 }
