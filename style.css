@@ -227,3 +227,8 @@ hr{
 span{
     color: #686b6f;
 }
+
+.nav-rt i{
+    font-size: 32px;
+    cursor: pointer;
+}
