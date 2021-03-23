@@ -1,55 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
 }
 
-body{
-    font-family: 'Poppins', sans-serif;    
+body {
+    font-family: 'Poppins', sans-serif;
 }
 
-.navbar{
-    background:whitesmoke;
+.navbar {
+    background: whitesmoke;
     padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-.nav-lt img{
-    margin-top:2px;
+.nav-lt img {
+    margin-top: 2px;
 }
 
-.navbar ul{
+.navbar ul {
     display: flex;
     align-items: center;
 }
 
-.navbar li{
+.navbar li {
     list-style: none;
     font-size: 1.5rem;
     text-transform: uppercase;
 }
 
-.navbar li a{
+.navbar li a {
     text-decoration: none;
     color: #82868f;
     margin: 0 2rem;
 }
 
-.btn{
-        border-radius: 50px;
-        border:none;
-        width: 127px;
-        height: 42px;
-        background-color: #0ebfdd;
-        color: white;
-        font-size: 17.86px;
+.btn {
+    border-radius: 50px;
+    border: none;
+    width: 127px;
+    height: 42px;
+    background-color: #0ebfdd;
+    color: white;
+    font-size: 17.86px;
 }
 
-.header-main{
+.header-main {
     background-image: url(./images/background.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -57,46 +57,45 @@ body{
     width: 100%;
     height: 600px;
     display: flex;
-    align-items:center;
+    align-items: center;
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
     color: white;
 }
 
-.header-main .intro{
-        font-size: 44px;
-        position: relative;
+.header-main .intro {
+    font-size: 44px;
 }
 
-.header-main p{
+.header-main p {
     margin-bottom: -300px;
     text-align: center;
     width: 48%;
     font-size: 20px;
 }
-  
-.about{
+
+.about {
     display: flex;
     align-items: center;
     flex-direction: column;
     height: 250px;
 }
 
-.about h1{
+.about h1 {
     color: #0ebfdd;
     font-size: 44px;
     margin-top: 3rem;
     font-weight: 200;
 }
 
-.about p{
+.about p {
     width: 48%;
     text-align: center;
     font-size: 20px;
     margin-top: .8rem;
 }
 
-.team{
+.team {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -106,32 +105,32 @@ body{
     color: white;
 }
 
-.team h1{
+.team h1 {
     font-size: 44px;
     font-weight: 200;
 }
 
-.team-images{
+.team-images {
     display: flex;
 }
 
-.tm-pos{
-    margin:0 2rem;
+.tm-pos {
+    margin: 0 2rem;
 }
 
-.tm-pos img{
-border-radius: 50%;
+.tm-pos img {
+    border-radius: 50%;
 }
 
-.team-degination{
+.team-degination {
     text-align: center;
 }
 
-.team-degination p{
+.team-degination p {
     font-weight: normal;
 }
 
-.team-btn{
+.team-btn {
     height: 40px;
     width: 180px;
     border-radius: 50px;
@@ -140,95 +139,192 @@ border-radius: 50%;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
-    border:1px solid white;
+    border: 1px solid white;
 }
 
-.map{
+.map {
     background-image: url(./images/map.jpg);
-    background-size: 101%;
-    height: 600px;
+    height: 400px;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
-footer{
+footer {
     background-color: #45494d;
     height: 150px;
 }
 
-.footer-up{
+.footer-up {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-.footer-lt ul{
+.footer-lt ul {
     display: flex;
     align-items: center;
     margin-top: 2rem;
 }
- .pos{
+
+.pos {
     margin-top: 2rem;
 }
 
-.footer-lt li{
-   list-style: none;
- 
+.footer-lt li {
+    list-style: none;
 }
 
-.footer-lt a{
+.footer-lt a {
     color: #d7dee4;
     text-decoration: none;
     margin: 1rem;
 }
 
-.footer-rt ul{
+.footer-rt ul {
     display: flex;
     align-items: center;
 }
 
-.footer-rt li{
-   list-style: none;
- 
+.footer-rt li {
+    list-style: none;
 }
 
-.footer-rt a{
+.footer-rt a {
     color: #d7dee4;
     text-decoration: none;
     margin: 1rem;
     border: 1px solid white;
-    padding:10px;
+    padding: 10px;
     font-size: 15px;
     border-radius: 50%;
 }
 
-hr{
+hr {
     width: 61%;
-    margin:2rem auto 1rem auto;
+    margin: 2rem auto 1rem auto;
 }
-  
-.footer-bottom ul{
+
+.footer-bottom ul {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     width: 81%;
 }
 
-.footer-bottom a{
+.footer-bottom a {
     color: #686b6f;
     text-decoration: none;
     margin: .6rem;
     font-weight: 700;
 }
 
-.footer-bottom li{
+.footer-bottom li {
     list-style: none;
 }
 
-span{
+span {
     color: #686b6f;
 }
 
-.nav-rt i{
+.nav-rt i {
     font-size: 32px;
     cursor: pointer;
+}
+
+@media (max-width:430px) {
+
+    /*navbar*/
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-rt {
+        display: none;
+    }
+
+    .navbar li a {
+        font-size: 18px;
+        margin: 0 1rem;
+    }
+
+    .header-main {
+        height: 300px;
+        position: relative;
+        justify-content: center;
+    }
+
+    .header-main .intro {
+        font-size: 44px;
+    }
+
+    .header-main p {
+        margin-bottom: -100px;
+        text-align: center;
+        width: 48%;
+        font-size: 20px;
+    }
+
+    .header-main .intro {
+        font-size: 23px;
+    }
+
+    .header-main p {
+        margin-bottom: -50px;
+        text-align: center;
+        width: 95%;
+        font-size: 15px;
+    }
+
+    .about h1 {
+        font-size: 40px;
+        margin-top: 1rem;
+    }
+
+    .about p {
+        width: 95%;
+        font-size: 20px;
+        margin-top: 0;
+    }
+
+    .team {
+        height: 850px;
+    }
+
+    .team-images {
+        flex-direction: column;
+    }
+
+    .tm-pos {
+        margin: 0.5rem 0;
+    }
+
+    .map {
+        height: 200px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    footer {
+        height: 220px;
+    }
+
+    .footer-up {
+        flex-direction: column;
+    }
+
+    .footer-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-bottom a {
+        font-size: 12px;
+        margin: 0.2em;
+    }
+
+    span {
+        align-items: center;
+    }
+
 }
