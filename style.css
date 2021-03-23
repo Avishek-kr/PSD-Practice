@@ -17,7 +17,7 @@ body{
     justify-content: space-around;
 }
 
-.nav-lt{
+.nav-lt img{
     margin-top:2px;
 }
 
@@ -93,4 +93,51 @@ body{
     text-align: center;
     font-size: 20px;
     margin-top: .8rem;
+}
+
+.team{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: #0ebfdd;
+    height: 600px;
+    color: white;
+}
+
+.team h1{
+    font-size: 44px;
+    font-weight: 200;
+}
+
+.team-images{
+    display: flex;
+}
+
+.tm-pos{
+    margin:0 2rem;
+}
+
+.tm-pos img{
+border-radius: 50%;
+}
+
+.team-degination{
+    text-align: center;
+}
+
+.team-degination p{
+    font-weight: normal;
+}
+
+.team-btn{
+    height: 40px;
+    width: 180px;
+    border-radius: 50px;
+    background-color: #0ebfdd;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border:1px solid white;
 }
