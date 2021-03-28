@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -10,37 +9,40 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-
 .navbar {
     background: whitesmoke;
     padding: 1rem;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    position: relative;
 }
 
-.nav-lt img {
-    margin-top: 2px;
+.bars {
+    z-index: 100;
 }
 
-.navbar ul {
-    display: flex;
-    align-items: center;
+.links {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 1;
+    background-color: whitesmoke;
+    height: 100vh;
+    width: 250px;
+    opacity: 0;
 }
 
-.navbar li {
+.links.open {
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+.links li {
     list-style: none;
-    font-size: 1.5rem;
-    text-transform: uppercase;
 }
 
-.navbar li a {
-    text-decoration: none;
-    color: #82868f;
-    margin: 0 2rem;
-}
-
-.btn {
+.links li .btn {
     border-radius: 50px;
     border: none;
     width: 127px;
@@ -48,6 +50,37 @@ body {
     background-color: #0ebfdd;
     color: white;
     font-size: 17.86px;
+}
+
+.links a {
+    color: #686b6f;
+    text-decoration: none;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10rem;
+}
+
+.nav-lt img {
+    margin-top: 2px;
+}
+
+.nav-rt i {
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 100;
+    position: absolute;
+    right: 60px;
+    top: 19px;
+}
+
+.navbar {
+    flex-direction: row;
+}
+
+.nav-rt .btn {
+    display: none;
 }
 
 .header-main {
@@ -64,36 +97,38 @@ body {
     color: white;
 }
 
-.header-main .intro {
-    font-size: 44px;
+.header-main {
+    height: 300px;
+    position: relative;
+    justify-content: center;
 }
 
 .header-main p {
-    margin-bottom: -300px;
     text-align: center;
-    width: 48%;
     font-size: 20px;
+}
+
+.header-main .intro {
+    font-size: 23px;
 }
 
 .about {
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 250px;
+    padding: 1rem;
 }
 
 .about h1 {
     color: #0ebfdd;
     font-size: 44px;
-    margin-top: 3rem;
     font-weight: 200;
 }
 
 .about p {
-    width: 48%;
+    width: 90%;
     text-align: center;
-    font-size: 20px;
-    margin-top: .8rem;
+    font-size: 18px;
 }
 
 .team {
@@ -102,7 +137,7 @@ body {
     justify-content: space-around;
     flex-direction: column;
     background-color: #0ebfdd;
-    height: 600px;
+    height: 850px;
     color: white;
 }
 
@@ -113,10 +148,11 @@ body {
 
 .team-images {
     display: flex;
+    flex-direction: column;
 }
 
 .tm-pos {
-    margin: 0 2rem;
+    margin: 0.5rem 0;
 }
 
 .tm-pos img {
@@ -209,7 +245,7 @@ hr {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    width: 81%;
+    /*    width: 81%;*/
 }
 
 .footer-bottom a {
@@ -227,152 +263,186 @@ span {
     color: #686b6f;
 }
 
-.nav-rt i {
-    font-size: 32px;
-    cursor: pointer;
+.about p {
+    margin-top: 0;
 }
 
-@media (max-width:430px) {
+.map {
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
-    /*navbar*/
-    .navbar {
-        flex-direction: column;
-    }
+footer {
+    height: 220px;
+}
 
-    .nav-rt {
-        display: none;
-    }
+.footer-up {
+    flex-direction: column;
+}
 
-    .navbar li a {
-        font-size: 18px;
-        margin: 0 1rem;
-    }
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    .header-main {
-        height: 300px;
-        position: relative;
-        justify-content: center;
-    }
+.footer-bottom a {
+    font-size: 12px;
+    margin: 0.2em;
+}
 
-    .header-main .intro {
-        font-size: 44px;
-    }
+span {
+    align-items: center;
+}
 
-    .header-main p {
-        margin-bottom: -100px;
-        text-align: center;
-        width: 48%;
-        font-size: 20px;
-    }
 
-    .header-main .intro {
-        font-size: 23px;
-    }
+/*responsive*/
 
-    .header-main p {
-        margin-bottom: -50px;
-        text-align: center;
-        width: 95%;
-        font-size: 15px;
-    }
-
-    .about h1 {
-        font-size: 40px;
-        margin-top: 1rem;
-    }
-
-    .about p {
-        width: 95%;
-        font-size: 20px;
-        margin-top: 0;
-    }
-
-    .team {
-        height: 850px;
-    }
-
-    .team-images {
-        flex-direction: column;
-    }
-
-    .tm-pos {
-        margin: 0.5rem 0;
-    }
-
-    .map {
-        height: 200px;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
-    footer {
-        height: 220px;
-    }
-
-    .footer-up {
-        flex-direction: column;
-    }
-
-    .footer-bottom {
+@media (min-width:770px) {
+    .links {
+        position: inherit;
+        height: 10px;
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-
-    .footer-bottom a {
-        font-size: 12px;
-        margin: 0.2em;
+    .links li .btn {
+    
     }
-
-    span {
+    .navbar {
+        flex-direction: row;
+    }
+    .navbar ul {
+        display: flex;
         align-items: center;
     }
-
-}
-
-@media (max-width: 870px){
-
-    .nav-lt img{
+    .navbar li {
+        list-style: none;
+        text-transform: uppercase;
+    }
+    .nav-rt .btn {
+        display: block
+    }
+    .bars {
+        display: none;
+    }
+      .navbar li a.open {
+        text-decoration: none;
+        color: #82868f;
+          font-size: 17px;
+        text-align: center;
+        margin: 4.1rem;  
+    } 
+    
+    .btn {
+        border-radius: 50px;
+        border: none;
+        width: 127px;
+        height: 42px;
+        background-color: #0ebfdd;
+        color: white;
+        font-size: 17.86px;
+    }
+    .nav-lt img {
         margin-top: 0.6rem;
     }
-
-    .navbar li a{
-        font-size: 20px;
+    .navbar li a {
+        font-size: 16px;
         text-align: center;
-        margin: 0.5rem;
+        margin: 1.5rem;
+        transition: all 0.2s ease-in-out;
     }
-
-     .header-main p {
-        margin-bottom: -50px;
-        width: 90%;
+    .navbar li a:hover {
+        border-bottom: 1px solid black;
     }
-
+    .header-main .intro {
+        margin-top: 1.5rem;
+    }
+    .header-main p {
+        margin-bottom: 30px;
+        width: 40%;
+        transition: 0.5s ease-in-out;
+    }
     .about h1 {
         font-size: 40px;
         margin-top: 1.2rem;
     }
-
     .about p {
-        width: 95%;
+        margin-top: ;
+        width: 60%;
     }
-
-    hr{
-        width: 75%;
-    }
-
-}
-
-@media (max-width: 1000px){
     .about h1 {
         font-size: 40px;
-        margin-top: 1.5rem;
+        margin-top: 1rem;
     }
-
-    .about p {
-        width: 95%;
+    .map {
+        height: 600px;
     }
+    footer {
+        height: 200px;
+    }
+    .footer-up {
+        flex-direction: row;
+    }
+    .footer-pos {
+        width: 80%;
+        margin: 0 auto;
+    }
+    footer {
+        height: 150px;
+    }
+    footer .footer-bottom {
+        justify-content: flex-end
+    }
+    .footer-bottom {
+        display: flex;
+        align-items: center;
+    }
+    .footer-bottom a {
+        font-size: 16px;
+        margin: 0 0 0 1em;
+    }
+    hr {
+        width: 100%;
+    }
+}
 
-    hr{
-        width: 71%;
+@media(max-width:1100px) {
+    .navbar li a {
+        font-size: 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (min-width:1180px) {
+    .navbar li a {
+        font-size: 17px;
+        text-align: center;
+        margin: 4.1rem;
+    }
+    .footer-pos {
+        width: 80%;
+        margin: 0 auto;
+    }
+    footer {
+        height: 150px;
+    }
+    footer .footer-bottom {
+        justify-content: flex-end
+    }
+}
+
+@media (min-width:1100px) {
+    .navbar {
+        font-size: 17px;
+        text-align: center;
+        justify-content: space-around;
+    }
+    .navbar li a {
+        font-size: 22px;
     }
 }
